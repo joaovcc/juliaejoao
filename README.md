@@ -1,0 +1,1 @@
+Bem vindo! Aqui iremos descrever as funcionalidades de nosso site.
