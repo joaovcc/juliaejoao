@@ -2,8 +2,11 @@
 // Don't forget to add it into respective layouts where this js file is needed
 $(document).ready(function() {
   $('.ww-home-page').backstretch([
-    { url: "images/video.mp4",mute: true, alignY: 0, isVideo: true, loop: true },
-  ], {duration: 1000000, fade: 2000});
+    // { url: "images/video.mp4",mute: true, alignY: 0, isVideo: true, loop: true },
+    "images/us_1.JPG",
+    "images/us_3.JPG",
+    "images/us_4.JPG",
+  ], {duration: 3000, fade: 2000});
   AOS.init({
     // uncomment below for on-scroll animations to played only once
     // once: true
