@@ -1,12 +1,17 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
-$(document).ready(function() {
-  $('.ww-home-page').backstretch([
-    // { url: "images/video.mp4",mute: true, alignY: 0, isVideo: true, loop: true },
-    "images/us_1.JPG",
-    "images/us_3.JPG",
-    "images/us_4.JPG",
-  ], {duration: 3000, fade: 2000});
+$(document).ready(function () {
+  if ($(window).width() > 700) {
+    $('.ww-home-page').backstretch([
+      { url: "images/video.mp4",mute: true, alignY: 0, isVideo: true, loop: true },
+    ], { duration: 700000, fade: 2000 });
+  } else {
+    $('.ww-home-page').backstretch([
+      "images/us_1.JPG",
+      "images/us_3.JPG",
+      "images/us_4.JPG",
+    ], { duration: 3000, fade: 2000 });
+  }
   AOS.init({
     // uncomment below for on-scroll animations to played only once
     // once: true
@@ -14,7 +19,7 @@ $(document).ready(function() {
 });
 
 // Smooth scroll for links with hashes
-$("a.smooth-scroll").click(function(event) {
+$("a.smooth-scroll").click(function (event) {
   // On-page links
   if (
     location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
@@ -32,7 +37,7 @@ $("a.smooth-scroll").click(function(event) {
           scrollTop: target.offset().top
         },
         1000,
-        function() {
+        function () {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -53,7 +58,7 @@ $("a.smooth-scroll").click(function(event) {
 // Photo Filter
 var activeFilter = "all";
 
-$(".ww-filter-button").on("click", function(e) {
+$(".ww-filter-button").on("click", function (e) {
   // remove btn-primary from all buttons first
   $(".ww-filter-button").removeClass("btn-primary");
   $(".ww-filter-button").addClass("btn-outline-primary");
@@ -72,7 +77,7 @@ function filterItems(filter) {
   }
 
   activeFilter = filter;
-  $(".ww-gallery .card").each(function() {
+  $(".ww-gallery .card").each(function () {
     var card = $(this);
     var groups = card.data("groups");
     var show = false;
@@ -87,7 +92,7 @@ function filterItems(filter) {
     }
     // hide everything first
     card.fadeOut(400);
-    setTimeout(function() {
+    setTimeout(function () {
       if (show && !card.is(":visible")) {
         card.fadeIn(400);
       }
@@ -96,16 +101,16 @@ function filterItems(filter) {
 }
 
 // Light Box
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+$(document).on("click", '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
 
-$(document).on("click", '#enviar', function(event) {
+$(document).on("click", '#enviar', function (event) {
   event.preventDefault();
-  
+
   const name = $('#nome').val();
-  
+
   const text = window.encodeURIComponent('Olá, noivos ❤ \nEstou confirmando a minha presença no casamento mais lindo do século! \nMeu nome de convidado: ' + name);
 
   const url = `https://api.whatsapp.com/send?phone=+5512988218755&text=${text}`;
@@ -114,7 +119,7 @@ $(document).on("click", '#enviar', function(event) {
 
 });
 
-$(document).on("click", 'ul.navbar-nav > li.nav-item > a[href="#rsvp"]', function(event) {
+$(document).on("click", 'ul.navbar-nav > li.nav-item > a[href="#rsvp"]', function (event) {
   event.preventDefault();
   setTimeout(() => {
     $('#nome').focus();
