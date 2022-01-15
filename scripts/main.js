@@ -113,7 +113,7 @@ $(document).on("click", '#enviar', function (event) {
 
   const text = window.encodeURIComponent('Olá, noivos ❤ \nEstou confirmando a minha presença no casamento mais lindo do século! \nMeu nome de convidado: ' + name);
 
-  const url = `https://api.whatsapp.com/send?phone=+5512988218755&text=${text}`;
+  const url = `https://api.whatsapp.com/send?phone=+5512999999999&text=${text}`;
 
   window.open(url);
 
