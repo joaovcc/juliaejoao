@@ -216,6 +216,24 @@ body {
   height: 100%;
 }
 #pedido {
-  padding: 0px;
-  height: 100vh;
+    height: 100vh;
+}
+.vh75 {
+  height: 75vh;
+}
+.underline {
+  color: #f04d30;
+  text-decoration: underline !important;
+}
+@media only screen and (min-width: 600px) {
+  .image-evento{
+    min-width: 445px;
+    min-height: 240px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .image-evento{
+    min-width: none;
+    min-height: none;
+  }
 }
