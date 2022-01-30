@@ -222,10 +222,26 @@ body {
   color: #f04d30;
   text-decoration: underline !important;
 }
+
+/* Campos customizados aqui */
+.btn-ctm {
+  height: 65px;
+  line-height: 45px;
+  inline-size: 180px;
+  font-size: 30px;
+}
 @media only screen and (min-width: 600px) {
   .image-evento{
     min-width: 445px;
     min-height: 240px;
+  }
+}
+@media only screen and (max-width: 751px) {
+  .btn-ctm-center{
+    text-align: center!important;
+  }
+  .btn-ctm-top{
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 600px) {
