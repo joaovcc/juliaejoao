@@ -3,7 +3,7 @@
 $(document).ready(function () {
   if ($(window).width() > 700) {
     $('.ww-home-page').backstretch([
-      { url: "images/video.mp4",mute: true, alignY: 0, isVideo: true, loop: true },
+      { url: "images/video.mp4", mute: true, alignY: 0, isVideo: true, loop: true },
     ], { duration: 700000, fade: 2000 });
   } else {
     $('.ww-home-page').backstretch([
@@ -124,4 +124,24 @@ $(document).on("click", 'ul.navbar-nav > li.nav-item > a[href="#rsvp"]', functio
   setTimeout(() => {
     $('#nome').focus();
   }, 2 * 1000);
+});
+
+$(document).on("click", '.modal-pix ', function (event) {
+  event.preventDefault();
+  var img = $('#img-pix').data('src');
+  $('#img-pix').attr('src', img);
+  $('#modal-pix').modal('show');
+});
+
+$(document).on("click", '#copia-pix ', function (event) {
+  event.preventDefault();
+  navigator.clipboard
+          .writeText($('#valor-copia-pix').text())
+          .then(
+              success => alertify.success('Chave PIX copiada com sucesso!'), 
+              err => alertify.error('Houve um erro ao copiar a chave PIX!')
+          );
+  var img = $('#img-pix').data('src');
+  $('#img-pix').attr('src', img);
+  $('#modal-pix').modal('show');
 });

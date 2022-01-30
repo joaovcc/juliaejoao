@@ -32,6 +32,8 @@
   <link href="css/font-awesome/css/all.min.css?ver=1.1.0" rel="stylesheet">
   <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
   <link href="css/ekko-lightbox.css?ver=1.1.0" rel="stylesheet">
+  <link href="css/alertify.min.css?ver=1.1.0" rel="stylesheet">
+  <link href="css/default.min.css?ver=1.1.0" rel="stylesheet">
   <link href="css/main.css?ver=1.1.0" rel="stylesheet">
   <noscript>
     <style type="text/css">
@@ -342,11 +344,10 @@
             </div>
           </div>
           <div class="row mb-5">
-            <!-- <div class="col-md-6 text-right btn-ctm-center">
-                <a class="btn btn-primary btn-ctm" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3URN5RVV244ML">PIX</a>
-            </div> -->
-            <!-- <div class="col-md-6 btn-ctm-center btn-ctm-top"> -->
-            <div class="col-md-12 text-center">
+            <div class="col-md-6 text-right btn-ctm-center">
+                <a class="btn btn-primary btn-ctm modal-pix" href="javascipt:void(0);">PIX</a>
+            </div>
+            <div class="col-md-6 btn-ctm-center btn-ctm-top">
                 <a class="btn btn-primary btn-ctm" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3URN5RVV244ML">PayPal</a>
             </div>
           </div>
@@ -381,12 +382,42 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="modal-pix" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nosso PIX</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="row text-center">
+            <div class="col-md-12">
+              <p>Escaneie o QR Code abaixo com seu app de transferência.</p>
+              <p><img data-src="./images/qrcode.png" id="img-pix"></p>
+              <p>OU</p>
+              <p>Chave PIX:</p>
+              <p><ins id="valor-copia-pix" class="valor-copia-pix">3a2bbf54-d7ef-4e86-be58-7c5d1a2a731a</ins> <a id="copia-pix" href="javascript:void(0);" title="Copiar chave PIX"><i class="fas fa-copy"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer></footer>
   <script src="scripts/jquery.min.js?ver=1.1.0"></script>
   <script src="scripts/bootstrap.bundle.min.js?ver=1.1.0"></script>
   <script src="scripts/aos.js?ver=1.1.0"></script>
   <script src="scripts/ekko-lightbox.min.js?ver=1.1.0"></script>
   <script src="scripts/jquery.backstretch.min.js"></script>
+  <script src="scripts/alertify.min.js"></script>
   <script src="scripts/main.js?ver=1.1.0"></script>
 </body>
 

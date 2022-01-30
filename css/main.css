@@ -230,6 +230,9 @@ body {
   inline-size: 180px;
   font-size: 30px;
 }
+#valor-copia-pix {
+  
+}
 @media only screen and (min-width: 600px) {
   .image-evento{
     min-width: 445px;
