@@ -34,6 +34,7 @@
   <link href="css/ekko-lightbox.css?ver=1.1.0" rel="stylesheet">
   <link href="css/alertify.min.css?ver=1.1.0" rel="stylesheet">
   <link href="css/default.min.css?ver=1.1.0" rel="stylesheet">
+  <link href="css/image-effect.css" rel="stylesheet">
   <link href="css/main.css?ver=1.1.0" rel="stylesheet">
   <noscript>
     <style type="text/css">
@@ -86,9 +87,10 @@
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#events">Eventos</a></li>
                 <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#people">Pessoas</a></li> -->
                 <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Galeria</a></li> -->
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#rsvp">Confirme sua presença</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#pedido">O Pedido de Casamento</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#pix">Apoio</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#rsvp">Confirmação</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#pedido">O Noivado</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#lista">Lista de Casamento</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#pix">PIX</a></li>
               </ul>
             </div>
           </div>
@@ -326,16 +328,35 @@
           </div>
         </div>
       </div>
-      <div class="ww-section bg-light" id="pix">
+      <div class="ww-section bg-light" id="lista">
         <div class="container">
-          <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Apoio de Coração</h2>
+          <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Lista de Casamento</h2>
           <div class="row text-center">
             <div class="col-md-12">
-              <p class="pt-3 text-center text-muted">Todos vocês são especiais para nós e de forma alguma entenda esse apoio como uma obrigação! Caso você queira e possa contribuir com alguma quantia de bufunfa, disponibilizamos algumas formas e ficaremos eternamente gratos! E obiviamente se quiser nos chamar para uma conversa, café, proza, churrasco, piquenique, almoço, jantar, lanchão, jogos de tabuleiro, pizza ou alguma outra coisa também ficaremos felizes hahaha!</p>
-              <!-- <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div> -->
+              <p class="pt-3 text-center text-muted">Nossa lista de presentes de casamento está disponível lá na Magalu, <a href="http://finalfeliz.de/casamentojuliaejoao" target="_blank">clique aqui</a> ou na imagem abaixo para acessa-la.</p>
+              <!-- <a href="http://finalfeliz.de/casamentojuliaejoao" target="_blank"><img src="./images/lista-exemplo.png"></a> -->
+
+              <div class="hover hover-2 text-white rounded" onclick="openLink('https://finalfeliz.de/casamentojuliaejoao');"><img src="./images/lista-exemplo.png" alt="">
+                <div class="hover-overlay"></div>
+                <div class="hover-2-content px-5 py-4">
+                  <h3 class="hover-2-title text-uppercase font-weight-bold mb-0">ACESSE</span></h3>
+                </div>
+              </div>
+
+
             </div>
           </div>
-          
+
+        </div>
+      </div>
+      <div class="ww-section" id="pix">
+        <div class="container">
+          <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">PIX</h2>
+          <div class="row text-center">
+            <div class="col-md-12">
+              <p class="pt-3 text-center text-muted">Caso você queira e possa contribuir com alguma quantia de bufunfa, disponibilizamos algumas formas e ficaremos eternamente gratos! E obiviamente se quiser nos chamar para uma conversa, café, proza, churrasco, piquenique, almoço, jantar, lanchão, jogos de tabuleiro, pizza ou alguma outra coisa também ficaremos muito felizes hahaha!</p>
+            </div>
+          </div>
           <div class="row text-center">
             <div class="col-md-12">
               <p class="h2 pt-3 text-muted ww-title">
@@ -345,7 +366,7 @@
           </div>
           <div class="row mb-5">
             <div class="col-md-6 text-right btn-ctm-center">
-                <a class="btn btn-primary btn-ctm modal-pix" href="javascipt:void(0);">PIX</a>
+                <a class="btn btn-primary btn-ctm modal-pix" href="javascript:void(0);">PIX</a>
             </div>
             <div class="col-md-6 btn-ctm-center btn-ctm-top">
                 <a class="btn btn-primary btn-ctm" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3URN5RVV244ML">PayPal</a>
@@ -385,7 +406,6 @@
           </button>
         </div>
         <div class="modal-body">
-          
           <div class="row text-center">
             <div class="col-md-12">
               <p>Escaneie o QR Code abaixo com seu app de transferência.</p>
@@ -407,7 +427,7 @@
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-  
+
       <!-- Section: Links -->
       <section class="m-2">
         <!--Grid row-->
@@ -422,11 +442,11 @@
             </ul>
           </div>
           <!--Grid column-->
-  
+
           <!--Grid column-->
           <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Redes sociais</h5>
-  
+
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="https://instagram.com/casamentojuliaejoao" target="_blank" class="text-white">Casamento</a>
@@ -439,10 +459,10 @@
       <!-- Section: Links -->
     </div>
     <!-- Grid container -->
-  
+
     <!-- Copyright -->
     <div class="text-center py-4" style="background-color: rgba(0, 0, 0, 0.2);">
-      
+
         <p class="my-0">&copy; Wonderful Wedding. All rights reserved.</p>
         <p class="mb-0">Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a>
         </p>

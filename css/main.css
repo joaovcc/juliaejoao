@@ -192,24 +192,24 @@ body {
 }
 
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 0; 
+    z-index: 0;
 }
-.cb-slideshow:after { 
+.cb-slideshow:after {
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left; 
+    background: transparent url(../images/pattern.png) repeat top left;
 }
-.cb-slideshow li:nth-child(1) span { 
-  background-image: url(../images/1.jpg) 
+.cb-slideshow li:nth-child(1) span {
+  background-image: url(../images/1.jpg)
 }
-.cb-slideshow li:nth-child(2) span { 
+.cb-slideshow li:nth-child(2) span {
   background-image: url(../images/2.jpg);
-  animation-delay: 6s; 
+  animation-delay: 6s;
 }
 .pedido-full{
   width: 100%;
@@ -230,9 +230,8 @@ body {
   inline-size: 180px;
   font-size: 30px;
 }
-#valor-copia-pix {
-  
-}
+
+
 @media only screen and (min-width: 600px) {
   .image-evento{
     min-width: 445px;
