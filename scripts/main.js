@@ -1,3 +1,6 @@
+function openLink(url, target = '_blank') {
+  window.open(url, target);
+}
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
 $(document).ready(function () {
@@ -138,7 +141,7 @@ $(document).on("click", '#copia-pix ', function (event) {
   navigator.clipboard
           .writeText($('#valor-copia-pix').text())
           .then(
-              success => alertify.success('Chave PIX copiada com sucesso!'), 
+              success => alertify.success('Chave PIX copiada com sucesso!'),
               err => alertify.error('Houve um erro ao copiar a chave PIX!')
           );
   var img = $('#img-pix').data('src');
